@@ -34,7 +34,7 @@ const SYSTEM_INSTRUCTION =
   '每张牌解读控制在3-4句话，简短但有力量。' +
   '输出格式使用 Markdown：牌名用 **加粗**，命运结语段落前加 --- 分隔线。';
 
-app.post('/api/reading', async (req, res) => {
+app.post('/reading', async (req, res) => {
   try {
     const { question, drawnCards } = req.body;
 
