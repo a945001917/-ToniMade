@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToniMade - Logo Concepts</title>
+    <style>
+        :root {
+            --bg-light: #fbfbfd;
+            --bg-dark: #000000;
+            --text-light: #1d1d1f;
+            --text-light-secondary: #86868b;
+            --text-dark: #f5f5f7;
+            --text-dark-secondary: #a1a1a6;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 2rem 2rem;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 24px;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: var(--text-light-secondary);
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 2rem;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .card {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .visualizer {
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .light-theme {
+            background-color: #ffffff;
+        }
+
+        .dark-theme {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
+
+        .dark-theme svg text {
+            fill: var(--text-dark);
+        }
+        
+        .dark-theme svg .secondary {
+            fill: var(--text-dark-secondary);
+        }
+
+        .info {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .dark-theme .info {
+            background-color: #1c1c1e;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .info h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .info p {
+            font-size: 13px;
+        }
+
+        /* The Logos */
+        .logo-text {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
+            font-size: 64px;
+            letter-spacing: -2.5px;
+        }
+        
+        .weight-bold { font-weight: 700; }
+        .weight-semibold { font-weight: 600; }
+        .weight-medium { font-weight: 500; }
+        .weight-regular { font-weight: 400; }
+        .weight-light { font-weight: 300; }
+        
+        .tracking-tight { letter-spacing: -3.5px; }
+        .tracking-normal { letter-spacing: -1.5px; }
+        .tracking-wide { letter-spacing: 2px; text-transform: uppercase; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ToniMade Logo Concepts</h1>
+        <p>Premium, minimal, Apple-inspired typography.</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Concept 1: The Classic Contrast -->
+        <div class="card">
+            <div class="visualizer light-theme">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="100%" height="100%">
+                    <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" class="logo-text" fill="#1d1d1f">
+                        <tspan class="weight-bold">Toni</tspan><tspan class="weight-light secondary" fill="#86868b">Made</tspan>
+                    </text>
+                </svg>
+            </div>
+            <div class="info">
+                <h3>Concept 1: Core Contrast</h3>
+                <p>Heavy visual weight on "Toni", light and gray tone on "Made". Creates a distinct balance recognizable in modern tech branding.</p>
+            </div>
+        </div>
+
+        <!-- Concept 1: Dark Mode -->
+        <div class="card dark-theme">
+            <div class="visualizer dark-theme">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="100%" height="100%">
+                    <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" class="logo-text" fill="#f5f5f7">
+                        <tspan class="weight-bold">Toni</tspan><tspan class="weight-light secondary" fill="#a1a1a6">Made</tspan>
+                    </text>
+                </svg>
+            </div>
+            <div class="info">
+                <h3>Concept 1 (Dark Mode)</h3>
+                <p>Pure white for the name, soft titanium gray for the modifier.</p>
+            </div>
+        </div>
+
+        <!-- Concept 2: Sleek Monoweight -->
+        <div class="card">
+            <div class="visualizer light-theme">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="100%" height="100%">
+                    <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" class="logo-text weight-semibold tracking-tight" fill="#1d1d1f">
+                        ToniMade
+                    </text>
+                </svg>
+            </div>
+            <div class="info">
+                <h3>Concept 2: Seamless Unified</h3>
+                <p>No color distinction. Extremely tight kerning ("tracking") and uniform semi-bold weight. Simple, authoritative, and clean.</p>
+            </div>
+        </div>
+
+        <!-- Concept 3: The Editorial -->
+        <div class="card">
+            <div class="visualizer light-theme">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="100%" height="100%">
+                    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="32" class="weight-bold tracking-wide" fill="#1d1d1f">
+                        TONI<tspan class="weight-light secondary" fill="#86868b">MADE</tspan>
+                    </text>
+                </svg>
+            </div>
+            <div class="info">
+                <h3>Concept 3: Wide Editorial</h3>
+                <p>Uppercase with wide tracking. Emits a luxury/"Pro" product feeling, similar to Apple's higher-end product sub-branding.</p>
+            </div>
+        </div>
+        
+        <!-- Concept 4: The Icon / Monogram -->
+        <div class="card">
+            <div class="visualizer light-theme">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+                    <rect x="10" y="10" width="100" height="100" rx="24" fill="#1d1d1f"/>
+                    <text x="50%" y="53%" dominant-baseline="middle" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="42" fill="#ffffff" class="weight-semibold" letter-spacing="-2">
+                        TM
+                    </text>
+                </svg>
+            </div>
+            <div class="info">
+                <h3>Concept 4: App / Favicon Monogram</h3>
+                <p>A "squircle" containing precise, tightly kerned initials. Matches iOS icon aesthetic natively.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
