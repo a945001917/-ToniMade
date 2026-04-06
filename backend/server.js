@@ -75,7 +75,13 @@ app.post('/api/reading', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log(`✦ 塔罗后端运行中 → http://localhost:${PORT}`);
-});
+// Local dev: start the server directly
+// Vercel: export the app as a serverless handler
+if (!process.env.VERCEL) {
+  const PORT = process.env.PORT || 3001;
+  app.listen(PORT, () => {
+    console.log(`✦ 塔罗后端运行中 → http://localhost:${PORT}`);
+  });
+}
+
+export default app;
